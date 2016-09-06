@@ -1,0 +1,5 @@
+Para crear una rama en git son necesarios los siguientes pasos:
+1. git branch Parcial //Aqui se crea la rama en el repositorio local.
+2. git checkout Parcial //Aqui se cambia de la rama en la que se este trabajando a la rama creada en el repositorio local.
+3. git push -u origin Parcial // Aqui se estan llevando los cambios nuevos, o ramas concebidas en el repositorio local al repositorio en linea (la nube)
+Asi se crea una nueva rama en el repositorio remoto.
