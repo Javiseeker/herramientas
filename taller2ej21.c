@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-int a,b,c,r,d,g,e;
+int a,b,c,r,d,g,s;
 
 do{
 printf("Escoja la opción que necesite:\n 1. Suma\n 2. Resta\n 3. Multiplicación\n 4. División\n 5. Potencia\n 6. Salir\n");
@@ -49,9 +49,9 @@ printf("Ingrese el numero de la potencia: ");
 scanf("%d",&c);
 d=1;
 g=b;
-e=1;
+s=1;
 for(int i=d;i<=c;i++){
-e=g*e;}
+s=g*s;}
 printf("El resultado es %d",e);
 break;
 case 6:
