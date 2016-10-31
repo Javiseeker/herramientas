@@ -1,14 +1,118 @@
 import tkinter as tk
 from tkinter import ttk
 def boton0on_click():
-	boton0.configure(resultado)
-	boton0.configure(foreground='red')
-	boton0.configure(background='gold')
-	boton.configure(state='disable')
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"0")
 pass
-def botonpuntonclick():
+def botonpuntoon_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+".")
 pass
 def boton1on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"1")
+pass
+def boton2on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"2")
+pass
+def boton3on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"3")
+pass
+def boton4on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"4")
+pass
+def boton5on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"5")
+pass
+def boton6on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"6")
+pass
+def boton7on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"7")
+pass
+def boton8on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"8")
+pass
+def boton9on_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set(textoActual+"9")
+pass
+
+def botondivisionon_click():
+	global numero
+	global opc
+	numero=float(label0Text.get())
+	opc='4'
+	label0Text.set("")
+pass
+def botonmultiplicacionon_click():
+	global numero
+	global opc
+	numero=float(label0Text.get())
+	opc='3'
+	label0Text.set("")
+pass
+def botonrestaon_click():
+	global numero
+	global opc
+	numero=float(label0Text.get())
+	opc='2'
+	label0Text.set("")
+pass
+def botonsumaon_click():
+	 global numero
+	 numero=float(label0Text.get())
+	 global opc
+	 opc='1'
+	 label0Text.set("")
+pass
+def botonreseton_click():
+	global textoActual
+	textoActual=label0Text.get()
+	label0Text.set("")
+pass
+def to_num(string):
+	print(string)
+	try:
+		return float(string)
+	except ValueError:
+		return int(string)
+
+def botonigualon_click():
+ global numero
+ global textoActual
+ global opc
+ textoActual=label0Text.get()
+ if opc=='1':
+   ope=	to_num(str(numero))+to_num(str(textoActual))
+   label0Text.set(str(ope))
+ if opc=='2':
+   ope=to_num(str(numero))-to_num(str(textoActual))
+   label0Text.set(str(ope))
+ if opc=='3':
+   ope=to_num(str(numero))*to_num(str(textoActual))
+   label0Text.set(str(ope))
+ if opc=='4':
+   ope=to_num(str(numero))/to_num(str(textoActual))
+   label0Text.set(str(ope))
 pass
 win = tk.Tk()
 win.title("Calculadora OP")
@@ -18,9 +122,12 @@ win.resizable(0,0)
 #ttk.Button(win,text="Click me",comman=on_click).grid(row=1,column=1)
 #label1=ttk.Label(win,text="Hola Label")
 #label1.grid(row=4,column=2)
+opc='0'
+numero=0.0
+textoActual=0.0
 boton0=ttk.Button(win,text="0",comman=boton0on_click)
 boton0.grid(row=5,column=2)
-botonpunto=ttk.Button(win,text=".",comman=botonopuntoon_click)
+botonpunto=ttk.Button(win,text=".",comman=botonpuntoon_click)
 botonpunto.grid(row=5,column=3)
 boton1=ttk.Button(win,text="1",comman=boton1on_click)
 boton1.grid(row=4,column=1)
@@ -52,7 +159,7 @@ botonreset=ttk.Button(win,text="CE",comman=botonreseton_click)
 botonreset.grid(row=2,column=5)
 botonigual=ttk.Button(win,text="=",comman=botonigualon_click)
 botonigual.grid(row=3,column=5)
-resultado=tk.StringVar()
-txtentry=ttk.Entry(win,textvariable=resultado)
+label0Text=tk.StringVar()
+txtentry=ttk.Entry(win,textvariable=label0Text)
 txtentry.grid(row=1)
 win.mainloop()
