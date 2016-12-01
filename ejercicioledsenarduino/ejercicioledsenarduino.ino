@@ -1,3 +1,4 @@
+int analog_pin=0;
 void setup() {
 Serial.begin(9600);
 pinMode(4,OUTPUT);
